@@ -12,7 +12,7 @@ export default function useCompanies() {
 
     //Delete company
     const destroyCompany = async (id) => {
-        await axios.delete(`/api/companies/${id}`)
+        await axios.delete('/api/companies/' + id)
     }
 
     return{

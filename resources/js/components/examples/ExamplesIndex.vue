@@ -33,6 +33,9 @@ export default {
     onMounted(getCompanies)
 
     const deleteCompany = async (id) => {
+        if (!window.confirm('Are you sure?')) {
+          return
+        }
         await destroyCompany(id)
         await getCompanies()
     }

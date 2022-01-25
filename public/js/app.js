@@ -19532,14 +19532,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
-                return destroyCompany(id);
+                if (window.confirm('Are you sure?')) {
+                  _context.next = 2;
+                  break;
+                }
+
+                return _context.abrupt("return");
 
               case 2:
                 _context.next = 4;
-                return getCompanies();
+                return destroyCompany(id);
 
               case 4:
+                _context.next = 6;
+                return getCompanies();
+
+              case 6:
               case "end":
                 return _context.stop();
             }
@@ -19862,7 +19870,7 @@ function useCompanies() {
           switch (_context2.prev = _context2.next) {
             case 0:
               _context2.next = 2;
-              return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]("/api/companies/".concat(id));
+              return axios__WEBPACK_IMPORTED_MODULE_1___default()["delete"]('/api/companies/' + id);
 
             case 2:
             case "end":
