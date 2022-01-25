@@ -15,6 +15,7 @@
           <td>{{ item.email }}</td>
           <td>{{ item.address }}</td>
           <td>{{ item.website }}</td>
+          <td><button @click="deleteCompany(item.id)" type="button" class="btn btn-danger btn-sm">Delete</button></td>
         </tr>
       </tbody>
     </table>
@@ -27,12 +28,18 @@ import useCompanies from "../../composables/companies.js";
 
 export default {
   setup(){
-    const {companies, getCompanies} = useCompanies()
+    const {companies, getCompanies, destroyCompany} = useCompanies()
 
     onMounted(getCompanies)
 
+    const deleteCompany = async (id) => {
+        await destroyCompany(id)
+        await getCompanies()
+    }
+
     return{
-      companies
+      companies,
+      deleteCompany
     }
   }
 }
