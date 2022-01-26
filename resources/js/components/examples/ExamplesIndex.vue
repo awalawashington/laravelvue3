@@ -16,6 +16,7 @@
           <td>{{ item.address }}</td>
           <td>{{ item.website }}</td>
           <td><button @click="deleteCompany(item.id)" type="button" class="btn btn-danger btn-sm">Delete</button></td>
+          <td><router-link :to="{ name: 'example.edit', params: { id: item.id } }"  type="button" class="btn btn-secondary btn-sm">Edit</router-link></td>
         </tr>
       </tbody>
     </table>

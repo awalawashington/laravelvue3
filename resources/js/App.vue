@@ -13,7 +13,7 @@
             </li>
           </ul>
           <form class="d-flex">
-            <router-link to="/example/create" type="submit">Create</router-link>
+            <router-link :to="{ name: 'example.create' }" type="submit">Create</router-link>
           </form>
         </div>
       </div>
