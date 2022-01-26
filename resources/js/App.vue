@@ -11,12 +11,9 @@
             <li class="nav-item">
               <router-link class="nav-link active" aria-current="page" to="/">Home</router-link>
             </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/example-details">Page 2</router-link>
-            </li>
           </ul>
           <form class="d-flex">
-            <button class="btn btn-outline-success" type="submit">Button</button>
+            <router-link to="/example/create" type="submit">Create</router-link>
           </form>
         </div>
       </div>

@@ -1,18 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import ExamplesIndex from '../components/examples/ExamplesIndex'
-import ExampleDetails from '../components/examples/ExampleDetails'
+import ExampleCreate from '../components/examples/ExampleCreate'
 
 
 const routes = [
   {
     path: '/',
-    name: 'ExamplesIndex',
+    name: 'examples.index',
     component: ExamplesIndex
   },
   {
-    path: '/example-details',
-    name: 'ExampleDetails',
-    component: ExampleDetails
+    path: '/example/create',
+    name: 'example.create',
+    component: ExampleCreate
   }
 ]
 
